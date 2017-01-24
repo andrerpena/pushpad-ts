@@ -1,0 +1,71 @@
+[33m[nodemon] 1.9.1[39m
+[33m[nodemon] reading config C:\Git\pushpad-ts\nodemon.json[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] ignoring: C:\Git\pushpad-ts\.git/**/* .nyc_output .sass-cache bower_components coverage C:\Git\pushpad-ts\node_modules/**/*[39m
+[33m[nodemon] watching: ./src/**/*.ts[39m
+[33m[nodemon] watching extensions: js,json[39m
+--------------
+node: v7.4.0
+nodemon: 1.9.1
+command: C:\Program Files\nodejs\node.exe C:\Users\andrerpena\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js --dump
+cwd: C:\Git\pushpad-ts
+OS: win32 x64
+--------------
+{ run: false,
+  system: { cwd: 'C:\\Git\\pushpad-ts' },
+  required: false,
+  dirs: [ 'C:\\Git\\pushpad-ts\\src' ],
+  timeout: 1000,
+  options: 
+   { dump: true,
+     watch: [ './src/**/*.ts', re: /\.\/src\/.*.*\/.*\.ts/ ],
+     exec: 'ts-node ./src/server/index.ts',
+     verbose: true,
+     ignore: 
+      [ '.git',
+        '.nyc_output',
+        '.sass-cache',
+        'bower_components',
+        'coverage',
+        'node_modules',
+        re: /\.git|\.nyc_output|\.sass\-cache|bower_components|coverage|node_modules/ ],
+     ignoreRoot: 
+      [ '.git',
+        '.nyc_output',
+        '.sass-cache',
+        'bower_components',
+        'coverage',
+        'node_modules' ],
+     restartable: 'rs',
+     colours: true,
+     execMap: { py: 'python', rb: 'ruby' },
+     stdin: true,
+     runOnChangeOnly: false,
+     stdout: true,
+     execOptions: 
+      { script: null,
+        exec: 'ts-node ./src/server/index.ts',
+        args: [],
+        scriptPosition: null,
+        nodeArgs: undefined,
+        ext: 'js,json',
+        env: {},
+        execArgs: [] },
+     monitor: 
+      [ './src/**/*.ts',
+        '!C:\\Git\\pushpad-ts\\.git/**/*',
+        '!.nyc_output',
+        '!.sass-cache',
+        '!bower_components',
+        '!coverage',
+        '!C:\\Git\\pushpad-ts\\node_modules/**/*' ] },
+  load: [Function],
+  reset: [Function: reset],
+  lastStarted: 0,
+  loaded: [ 'C:\\Git\\pushpad-ts\\nodemon.json' ],
+  watchInterval: null,
+  command: 
+   { raw: { executable: 'ts-node ./src/server/index.ts', args: [] },
+     string: 'ts-node ./src/server/index.ts' } }
+--------------
+[33m[nodemon] exiting[39m
