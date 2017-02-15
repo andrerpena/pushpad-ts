@@ -9,8 +9,8 @@ module.exports = {
 
     output: {
         filename: 'bundle.js',
-        path: './dist/',
-        publicPath: '/'
+        path: '/',
+        publicPath: 'http://localhost:8080/'
     },
 
     externals: undefined,
@@ -23,16 +23,15 @@ module.exports = {
 
     module: {
         rules: [
-            { test: /\.ts|\.tsx/, use: ['awesome-typescript-loader'] },
+            { test: /\.ts|\.tsx/, use: ['react-hot-loader/webpack', 'awesome-typescript-loader'] },
             { test: /\.css/, use: ['style-loader', 'css-loader'] },
             { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-            { test: /\.jpe?g$|\.gif$|\.png$|\.ico$/, use: ['file?name=[name].[ext]'] },
-            { test: /\.eot|\.ttf|\.svg|\.woff2?/, use: ['file?name=[name].[ext]'] }
+            { test: /\.jpe?g$|\.gif$|\.png$|\.ico$/, use: ['file-loader?name=[name].[ext]'] },
+            { test: /\.eot|\.ttf|\.svg|\.woff2?/, use: ['file-loader?name=[name].[ext]'] }
         ]
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('development'),

@@ -8,9 +8,15 @@ const getMountPoint = () => {
 	return document.getElementById("app");
 };
 
+declare var module: { hot: any };
+
+if (module['hot']) {  
+    module['hot'].accept();  
+}  
+
 ReactDOM.render(
 	<div>
-		Hello
+		Home
 	</div>,
 	getMountPoint()
 );
