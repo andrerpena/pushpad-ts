@@ -10,8 +10,8 @@ const getMountPoint = () => {
 
 declare var module: { hot: any };
 
-if (module['hot']) {  
-    module['hot'].accept();  
+if (module.hot) {  
+    module.hot.accept();  
 }  
 
 ReactDOM.render(

@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node ./src/server/index.ts",
-    "wpds": "webpack-dev-server --hot --config ./webpack.config.dev.js"
+    "wpds": "webpack-dev-server --hot --config ./webpack.config.dev.js",
+    "db-install": "cross-env COMMAND=create_dev_dbs PGPASSWORD=@Pushpad ts-node ./db/installDB.ts",
+    "db-drop": "cross-env COMMAND=drop_dev_dbs PGPASSWORD=@Pushpad ts-node ./db/installDB.ts",
+    "db-generate": "cross-env COMMAND=generate_scripts PGPASSWORD=@Pushpad ts-node ./db/installDB.ts"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   },
   "homepage": "https://github.com/andrerpena/pushpad-ts#readme",
   "devDependencies": {
+    "@types/node": "^7.0.5",
     "awesome-typescript-loader": "^3.0.0-beta.18",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.5",
@@ -45,6 +49,7 @@
     "@types/webpack": "^2.2.5",
     "bootstrap": "^4.0.0-alpha.6",
     "colors": "^1.1.2",
+    "cross-env": "^3.1.4",
     "express": "^4.14.0",
     "font-awesome": "^4.7.0",
     "react": "^15.4.2",
